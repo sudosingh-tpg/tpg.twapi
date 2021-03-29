@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Verify Vendor Profile" verbose="10">
+	<test name="Vendor profile">
+		<classes>
+			<class name="testCases.VendorProfile" />
+		</classes>
+	</test>
+</suite>
