@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite name="Verify Vendor Profile" verbose="10">
+<listeners>
+		<listener class-name="reports.ExtentListener" />
+	</listeners>
 	<test name="Vendor profile">
 		<classes>
 			<class name="testCases.VendorProfile" />

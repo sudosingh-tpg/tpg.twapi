@@ -1,30 +1,22 @@
 package testCases;
 
-import java.io.File;
-
+import org.testng.ITestContext;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
-
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
-
 import requestBuilder.AccessTokenBuilder;
 
 public class TestManager {
 	protected String accessToken;
-	public static ExtentTest test;
-	public static ExtentReports report;
 	
 	@BeforeSuite(alwaysRun = true)
 	public void preSuiteActions() {
-		ExtentHtmlReporter extent = new ExtentHtmlReporter(new File(System.getProperty("user.dir")+"/Reports/ExtentReport.html"));
-		report = new ExtentReports();
-		report.attachReporter(extent);
+		
 	}
 	
 	@AfterSuite(alwaysRun = true)
@@ -33,12 +25,16 @@ public class TestManager {
 	}
 	
 	@BeforeTest(alwaysRun = true)
-	public void preTestActions() {
+	public void preTestActions(ITestContext context) {
+	}
+	
+	@BeforeMethod(alwaysRun = true)
+	public void preTestMethodActions(ITestResult result, ITestContext context) {
 		
 	}
 	
-	@AfterTest(alwaysRun = true)
-	public void postTestActions() {
+	@AfterMethod(alwaysRun = true)
+	public void postTestMethodActions() {
 		
 	}
 	

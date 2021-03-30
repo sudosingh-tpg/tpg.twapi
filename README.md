@@ -66,7 +66,7 @@ For any operating system, there are a couple of ways to execute the created Suit
 In the root directory > test-suite folder, there are Test Suites. We can right click any suite that we want and run it as testNG Suite
 ![Run As](Readme/runas.png)
 
-2. Maven - Command line
+2. Maven - Command line  
 Navigate to the root directory and:
 
 ```bash
@@ -83,3 +83,17 @@ If on a WindowsOS:
 ```bash
 ./basicexec.bat environmentID suiteFileName.xml
 ```
+
+##### Reports
+This Framework uses Extent Reporting for detailed Test reports, it uses TestNG listeners to make the job easier
+
+After the execution, navigate to
+
+```bash
+cd ./TestReport
+```
+and view the results of the most recent Suite Execution
+
+![Report Format](Readme/exReports.png)
+
+>For further information on Extent Reports, please refer to [Extent Reports Documentation](https://www.extentreports.com/docs/versions/5/java/index.html)
